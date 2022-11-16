@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+    text-align: center;
+
+}
+.redbox{
+    background-color: red;
+    height: 25px;
+    width: 25px;
+    margin: 10px auto;
+}
+.greenbox {
+    background-color: green;
+    height: 25px;
+    width: 25px;
+    margin: 10px auto;
+}
+.bluebox{
+    background-color: blue;
+    height: 25px;
+    width: 25px;
+    margin: 10px auto;
+}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Game acak warna</h1>
+        <button id="tombol">Tekan</button><br>
+        <div class="redbox"></div><br>
+        <input type="range" name="red" id="red" min="0" max="255">
+
+        <div class="greenbox"></div><br>
+        <input type="range" name="green" id="green" min="0" max="255">
+
+        <div class="bluebox"></div><br>
+        <input type="range" name="blue" id="blue" min="0" max="255">
+    </div>
+
+    <script src="script.js">
+        const body=document.querySelector('body');
+const button=document.getElementById('tombol');
+button.addEventListener('click',function(){
+    body.style.backgroundColor ='grey';
+})
+
+const sred=document.getElementById('red');
+const sgreen=document.getElementById('green');
+const sblue=document.getElementById('blue');
+
+
+sred.addEventListener('input',function(){
+    r=sred.value;
+    g=sgreen.value;
+    b=sblue.value;
+    body.style.backgroundColor=`rgb(${r},${g},${b})`;});
+    
+
+sgreen.addEventListener('input',function(){
+    r=sred.value;
+    g=sgreen.value;
+    b=sblue.value;
+    body.style.backgroundColor=`rgb(${r},${g},${b})`;});
+
+sblue.addEventListener('input',function(){
+     r=sred.value;
+    g=sgreen.value;
+     b=sblue.value;
+    body.style.backgroundColor=`rgb(${r},${g},${b})`;});
+
+
+    </script>
+</body>
+</html>
